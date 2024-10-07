@@ -1,3 +1,8 @@
+
+# Project Title
+
+A brief description of what this project does and who it's for
+
 Here is the README.md file for your SaaS application, which provides comprehensive, end-to-end information.
 ________________________________________
 Private Hospitals SaaS Platform
@@ -27,7 +32,7 @@ ________________________________________
 1. Directory Structure
 The file structure of the application is organized as follows:
 plaintext
-Copy code
+```Copy code
 frontend/
 ├── public/
 │   ├── index.html                # Main HTML template for the app
@@ -41,7 +46,7 @@ frontend/
 │   └── index.js                  # Application bootstrapper
 ├── Dockerfile                    # Docker configuration for containerization
 ├── package.json                  # Node.js dependencies and scripts
-└── README.md                     # You are here!
+└── README.md                     # You are here! ```
 ________________________________________
 2. Installation
 Pre-requisites
@@ -50,23 +55,27 @@ Pre-requisites
 •	Docker (optional but recommended for production)
 •	Okta Developer Account
 Clone the Repository
+```
 bash
-Copy code```
+Copy code
 git clone https://github.com/your-repo/private-hospital-saas.git
 cd private-hospital-saas
 Install Node.js Dependencies
 Inside the frontend/ folder, run:
 bash
-Copy code```
+Copy code
+```
 npm install
 ________________________________________
 3. Environment Variables
 You need to set up the following environment variables in a .env file in the root directory for Okta integration and any necessary configurations:
 bash
+```
 Copy code
 REACT_APP_OKTA_ISSUER=https://your-org.okta.com/oauth2/default
 REACT_APP_OKTA_CLIENT_ID=your_client_id
 REACT_APP_OKTA_REDIRECT_URI=http://localhost:3000/login/callback
+```
 For deployment environments, make sure to update these values with your Okta organization settings.
 ________________________________________
 4. Authentication Setup
@@ -83,6 +92,7 @@ ________________________________________
 Running the App Locally
 Once the dependencies are installed, you can run the app locally with:
 bash
+```
 Copy code
 npm start
 The application will be available at http://localhost:3000.
@@ -91,6 +101,7 @@ ________________________________________
 To build the application for production usage, run the following command:
 bash
 Copy code
+```
 npm run build
 This will create an optimized build in the build/ directory, which can be deployed to a production environment.
 ________________________________________
@@ -99,10 +110,12 @@ To containerize and deploy the application with Docker, follow these steps:
 Build the Docker Image
 bash
 Copy code
+```
 docker build -t private-hospital-saas .
 Run the Docker Container
 bash
 Copy code
+```
 docker run -p 3000:3000 private-hospital-saas
 The application will be accessible via http://localhost:3000. You can modify the ports as needed for your environment.
 ________________________________________
