@@ -51,13 +51,13 @@ Pre-requisites
 •	Okta Developer Account
 Clone the Repository
 bash
-Copy code
+Copy code```
 git clone https://github.com/your-repo/private-hospital-saas.git
 cd private-hospital-saas
 Install Node.js Dependencies
 Inside the frontend/ folder, run:
 bash
-Copy code
+Copy code```
 npm install
 ________________________________________
 3. Environment Variables
